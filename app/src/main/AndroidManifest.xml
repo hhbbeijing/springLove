@@ -46,6 +46,9 @@
                       android:path="/pathname/pathname"></data>
             </intent-filter>
         </activity>
+
+        <activity android:name=".lambda.LambdaActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

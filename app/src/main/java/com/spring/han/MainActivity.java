@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.spring.han.activity.TargetActivity;
+import com.spring.han.lambda.LambdaActivity;
 import com.spring.han.layout.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -72,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //action命名规则：包名+字符串；当有多个重复的aciton时，列表展示所有；
                 intent1.setAction("com.spring.han.actionName");
                 startActivity(intent1);
+                break;
+            case  R.id.id_button_4:
+                startActivity(new Intent(this,LambdaActivity.class));
                 break;
             default:
                 break;

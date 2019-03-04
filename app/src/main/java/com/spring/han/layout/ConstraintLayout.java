@@ -12,7 +12,7 @@ import com.spring.han.constant.SpringLog;
 
 /**
  *
- * 生命周期
+ * Activity的生命周期
  *
  * @author hanhaibo
  * @version v1.0
@@ -23,9 +23,6 @@ public class ConstraintLayout extends Activity {
     private TextView textView1;
     private TextView textView;
 
-    // some transient state for the activity instance
-    private String gameState = "gameState";
-//    private String GAME_STATE_KEY = "GAME_STATE_KEY";
     private String TEXT_VIEW_KEY = "TEXT_VIEW_KEY";
     private String TEXT_VIEW_KEY_COUNT = "TEXT_VIEW_KEY_COUNT";
 
@@ -34,7 +31,6 @@ public class ConstraintLayout extends Activity {
         super.onCreate(savedInstanceState);
         // recovering the instance state
         if (savedInstanceState != null) {
-//            gameState = savedInstanceState.getString(GAME_STATE_KEY);
             SpringLog.print(SpringLog.TAG,"--->savedInstanceState != null");
 
         }
@@ -91,7 +87,6 @@ public class ConstraintLayout extends Activity {
     * */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-//        outState.putString(GAME_STATE_KEY,gameState);
         outState.putString(TEXT_VIEW_KEY, "onSaveInstanceState");
         outState.putInt(TEXT_VIEW_KEY_COUNT, Integer.parseInt(textView1.getText().toString())+1);
         super.onSaveInstanceState(outState);
